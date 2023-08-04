@@ -1,27 +1,4 @@
-package crystalBot.tasks.pxrd;
-
-import robotChemist.interfaces.GenericTwoFingerGripper.GripperPos;
-import robotChemist.interfaces.LBRCommander;
-import com.kuka.roboticsAPI.applicationModel.IApplicationData;
-import com.kuka.task.ITaskLogger;
-
-public class LoadPXRD 
-{
-	private LBRCommander commander;
-	private ITaskLogger logger;
-	private IApplicationData applicationData;
-	private boolean needCalibration;
-
 	
-	public LoadPXRD(LBRCommander commander, boolean needCalibration, IApplicationData applicationData, ITaskLogger logger)
-	{
-		this.commander = commander;
-		this.applicationData = applicationData;
-		this.logger = logger;
-		this.needCalibration = needCalibration;
-	}
-	
-	public void run() throws Exception{	
 		// Calibrate
 		if (needCalibration)
 		{
