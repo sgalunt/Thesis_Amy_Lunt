@@ -1,24 +1,4 @@
-package crystalBot.tasks.pxrd;
 
-import robotChemist.interfaces.GenericTwoFingerGripper.GripperPos;
-import robotChemist.interfaces.LBRCommander;
-
-import com.kuka.roboticsAPI.motionModel.controlModeModel.CartesianImpedanceControlMode;
-import com.kuka.task.ITaskLogger;
-
-public class OpenDoors 
-{
-	private LBRCommander commander;
-	private ITaskLogger logger;
-	private boolean needCalibration;
-
-	
-	public OpenDoors(LBRCommander commander, boolean needCalibration, ITaskLogger logger)
-	{
-		this.commander = commander;
-		this.logger = logger;
-		this.needCalibration = needCalibration;
-	}
 	
 	public void run() throws Exception{	
 		// create impedance control mode
