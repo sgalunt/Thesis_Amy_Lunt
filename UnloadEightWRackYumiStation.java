@@ -1,32 +1,4 @@
-package crystalBot.tasks.yumiStation;
 
-import robotChemist.interfaces.GenericTwoFingerGripper.GripperPos;
-import robotChemist.interfaces.LBRCommander;
-import robotChemist.tasks.RackHandling;
-import robotChemist.utility.Rack;
-
-import com.kuka.roboticsAPI.applicationModel.IApplicationData;
-import com.kuka.roboticsAPI.geometricModel.ObjectFrame;
-import com.kuka.roboticsAPI.geometricModel.Workpiece;
-import com.kuka.task.ITaskLogger;
-
-public class UnloadEightWRackYumiStation 
-{
-	private LBRCommander commander;
-	private ITaskLogger logger;
-	private IApplicationData applicationData;
-	private boolean needCalibration;
-
-	
-	public UnloadEightWRackYumiStation(LBRCommander commander, Workpiece rack, RackHandling rackHandling, boolean needCalibration, IApplicationData applicationData,ITaskLogger logger)
-	{
-		this.commander = commander;
-		this.applicationData = applicationData;
-		this.logger = logger;
-		this.needCalibration = needCalibration;
-	}
-	
-	public void run() throws Exception{
 		
 		
 		// Calibration at YumiStation
